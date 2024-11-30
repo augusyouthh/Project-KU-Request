@@ -1,0 +1,5 @@
+*
+!*appealPDF/
+!*userProfileImage/
+!*.csv
+!.gitignore
