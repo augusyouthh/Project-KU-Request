@@ -1,0 +1,6 @@
+@import "noto.css";
+.choice-box{
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 25px;
+    -fx-border-color: black;
+}

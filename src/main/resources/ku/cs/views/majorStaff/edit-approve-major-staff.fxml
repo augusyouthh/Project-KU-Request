@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.majorStaff.EditApproveMajorStaffController">
+    <children>
+
+        <TextField fx:id="nameId" layoutX="475.0" layoutY="252.0" prefHeight="47.0" prefWidth="396.0" promptText="Enter name" styleClass="text-field" stylesheets="@../../style/Style.css" />
+        <TextField fx:id="positionId" layoutX="477.0" layoutY="368.0" prefHeight="47.0" prefWidth="396.0" promptText="Enter position" />
+        <Label layoutX="549.0" layoutY="146.0" text="แก้ไขข้อมูลเจ้าหน้าที่ภาควิชา">
+
+            <font>
+                <Font name="AppleMyungjo Regular" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="686.0" layoutY="219.0" text="ชื่อ-นามสกุล">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="689.0" layoutY="333.0" text="ตำแหน่ง">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="confirmButton" layoutX="821.0" layoutY="513.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="112.0" styleClass="LoginButton" text="ยืนยัน">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Label fx:id="errorLabel1" layoutX="690.0" layoutY="301.0" text="errorLabel1" textFill="RED" />
+        <Label fx:id="errorLabel2" layoutX="687.0" layoutY="416.0" text="errorLabel2" textFill="RED" />
+        <Label fx:id="errorLabel3" layoutX="851.0" layoutY="566.0" text="errorLabel3" textFill="RED" />
+        <Pane layoutX="63.0" layoutY="51.0">
+            <children>
+                <ImageView fitHeight="36.0" fitWidth="35.0">
+                    <image>
+                        <Image url="@../../../../images/Leftarrow.png" />
+                    </image>
+                </ImageView>
+                <Button mnemonicParsing="false" onAction="#onBackButton" opacity="0.0" prefHeight="41.0" prefWidth="47.0" text="Back">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <ImageView fitHeight="533.0" fitWidth="566.0" layoutX="91.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../images/Character-working-laptop-sitting-chair.png" />
+            </image>
+        </ImageView>
+    </children>
+    <stylesheets>
+        <URL value="@../../style/baseOnPageLightMode.css" />
+        <URL value="@../../style/noto.css" />
+    </stylesheets>
+</AnchorPane>

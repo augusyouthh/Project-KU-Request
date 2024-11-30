@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: EDF5FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.majorStaff.MajorAcceptAppealController">
+   <children>
+      <Pane layoutX="61.0" layoutY="49.0">
+         <children>
+            <ImageView fitHeight="36.0" fitWidth="35.0">
+               <image>
+                  <Image url="@../../../../images/Leftarrow.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#onBackButton" opacity="0.0" prefHeight="41.0" prefWidth="47.0" text="Back">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="147.0" layoutY="6.0" prefHeight="708.0" prefWidth="847.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, gray, 20, 0.1, 0 ,0);">
+         <children>
+            <Label fx:id="ErrorLabel" layoutX="435.0" layoutY="580.0" prefHeight="17.0" prefWidth="176.0" text="Please fill out before submitting!" textFill="#f50000" visible="false">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="364.0" layoutY="24.0" text="คำร้องประเภท">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="signatureLabel" alignment="CENTER" layoutX="563.0" layoutY="531.0" prefHeight="16.0" prefWidth="270.0" text="Signature" textFill="#807a7a">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLabel" alignment="CENTER" layoutX="563.0" layoutY="583.0" prefHeight="15.0" prefWidth="270.0" text="Date" textFill="#807a7a">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="typeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="312.0" layoutY="59.0" prefHeight="23.0" prefWidth="224.0" text="Type">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="subjectLabel" alignment="CENTER" layoutX="104.0" layoutY="117.0" prefHeight="39.0" prefWidth="640.0" style="-fx-font-weight: bold;" text="Subject">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="declineWhen" layoutX="47.0" layoutY="507.0" text="ถูกปฏิเสธวันที่:" textFill="RED" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="DeclineDateLabel" layoutX="146.0" layoutY="507.0" text="DeclineDate" textFill="RED" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="declineLabel" alignment="TOP_LEFT" layoutX="47.0" layoutY="536.0" prefHeight="58.0" prefWidth="483.0" text="DeclineReason" textFill="RED" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="409.0" layoutY="97.0" text="เรื่อง">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></Label>
+            <Label fx:id="requestLabel" alignment="TOP_LEFT" layoutX="37.0" layoutY="156.0" prefHeight="322.0" prefWidth="773.0" text="Request" wrapText="true">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="676.0" layoutY="507.0" text="ชื่อผู้ส่ง">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="677.0" layoutY="561.0" text="วันที่ส่ง">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="majorApprovedateLabel" layoutX="40.0" layoutY="622.0" text="MajorApprovedDate" textFill="GREEN" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="facultyApprovedateLabel" layoutX="35.0" layoutY="665.0" text="FacultyApprovedDate" textFill="GREEN" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="majorApproveWhen" layoutX="35.0" layoutY="598.0" text="เจ้าหน้าที่ภาคผู้อนุมัติ / วันที่:" textFill="#096109" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="facultyApproveWhen" layoutX="35.0" layoutY="645.0" text="เจ้าหน้าที่คณะผู้อนุมัติ / วันที่:" textFill="#096109" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="majorSignatureLabel" layoutX="219.0" layoutY="599.0" text="majorSignatureLabel" textFill="GREEN" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="facultySignatureLabel" layoutX="219.0" layoutY="645.0" text="FacultySignatureLabel" textFill="GREEN" visible="false">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="declineTextField" alignment="TOP_LEFT" layoutX="994.0" layoutY="270.0" prefHeight="250.0" prefWidth="258.0" promptText="Decline reason" visible="false" />
+      <Button fx:id="applyDeclineButton" layoutX="1055.0" layoutY="640.0" minHeight="40.0" minWidth="170.0" mnemonicParsing="false" onAction="#onApplyDeclineButton" style="-fx-background-color: RED; -fx-background-radius: 12;" text="Apply" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Group layoutX="30.0" layoutY="513.0" />
+      <Label fx:id="MajorEndorsers" layoutX="1032.0" layoutY="162.0" text="ลงนามเจ้าหน้าที่ภาควิชา:">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="endorserBox" layoutX="1032.0" layoutY="192.0" prefHeight="25.0" prefWidth="175.0" />
+      <CheckBox fx:id="sendingToDean" layoutX="1030.0" layoutY="236.0" mnemonicParsing="false" text="คำร้องส่งต่อให้คณบดี">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></CheckBox>
+      <Button fx:id="declineButton" layoutX="1030.0" layoutY="105.0" minHeight="40.0" minWidth="170.0" mnemonicParsing="false" onAction="#DeclineApplyClick" styleClass="CancelButton" text="ปฏิเสธคำร้อง" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="approveAppealButton" layoutX="1030.0" layoutY="45.0" minHeight="40.0" minWidth="170.0" mnemonicParsing="false" onAction="#onApplyAppealClick" styleClass="AcceptButton" text="อนุมัติคำร้อง" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorLabel" layoutX="1072.0" layoutY="255.0" text="Select Staff first!" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="downloadPDF" layoutX="1045.0" layoutY="545.0" mnemonicParsing="false" onAction="#showPDFInProject" style="-fx-background-color: blue;" text="download PDF" textFill="WHITE" />
+      <Hyperlink fx:id="pdfLink" layoutX="1101.0" layoutY="554.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Hyperlink>
+   </children>
+   <stylesheets>
+      <URL value="@../../style/baseOnPageLightMode.css" />
+      <URL value="@../../style/noto.css" />
+   </stylesheets>
+</AnchorPane>

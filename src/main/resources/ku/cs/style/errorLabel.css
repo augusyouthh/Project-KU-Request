@@ -1,0 +1,5 @@
+@import "noto.css";
+.label{
+    -fx-text-fill: red;
+    -fx-font-size: 13px;
+}

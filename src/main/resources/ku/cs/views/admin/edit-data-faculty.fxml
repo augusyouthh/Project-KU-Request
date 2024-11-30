@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.admin.editDataFacultyController">
+   <children>
+      <TextField fx:id="facultyId" layoutX="747.0" layoutY="250.0" prefHeight="47.0" prefWidth="396.0" promptText="Enter Faculty ID" styleClass="text-field" />
+      <TextField fx:id="facultyName" layoutX="747.0" layoutY="385.0" prefHeight="47.0" prefWidth="396.0" promptText="Enter Faculty Name" />
+      <Label layoutX="864.0" layoutY="127.0" text="Edit Data Faculty">
+         <font>
+            <Font name="AppleMyungjo Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="744.0" layoutY="199.0" text="Faculty Id">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="747.0" layoutY="349.0" text="Faculty Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="okButton" layoutX="895.0" layoutY="487.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="112.0" styleClass="ok-button" text="OK">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorLabel1" layoutX="747.0" layoutY="304.0" text="errorLabel1" textFill="RED" />
+      <Label fx:id="errorLabel2" layoutX="747.0" layoutY="441.0" text="errorLabel2" textFill="RED" />
+      <Label fx:id="errorLabel3" layoutX="850.0" layoutY="552.0" text="errorLabel3" textFill="RED" />
+      <Button layoutX="1064.0" layoutY="41.0" mnemonicParsing="false" onAction="#onAddNewFacultyButtonClicked" styleClass="ok-button" text="Add new faculty">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="63.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/Leftarrow.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="39.0" layoutY="57.0" mnemonicParsing="false" onAction="#onBackButtonClick" opacity="0.0" prefHeight="47.0" prefWidth="86.0" text="Button" />
+      <Pane layoutX="125.0" layoutY="144.0" prefHeight="432.0" prefWidth="523.0" styleClass="background-pane2">
+         <children>
+            <ImageView fitHeight="176.0" fitWidth="332.0" layoutX="96.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="377.0" fitWidth="404.0" layoutX="-115.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Character-working-laptop-sitting-chair.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../style/baseOnPageLightMode.css" />
+      <URL value="@../../style/noto.css" />
+   </stylesheets>
+</AnchorPane>

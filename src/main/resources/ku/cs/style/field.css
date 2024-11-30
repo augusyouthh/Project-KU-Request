@@ -1,0 +1,10 @@
+@import "noto.css";
+.text-field{
+    background-color: #fff;
+    border-bottom-color: #333333;
+}
+.text-field{
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 10px;
+    -fx-border-color: #BFC9CA;
+}

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<Pane stylesheets="@../../style/baseOnPageLightMode.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.UserProfileController">
+    <children>
+        <AnchorPane prefHeight="720.0" prefWidth="1280.0">
+            <children>
+                <Circle fx:id="imagecircle" fill="DODGERBLUE" layoutX="327.0" layoutY="184.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+                <Label fx:id="nameLabel" layoutX="640.0" layoutY="94.0" prefHeight="23.0" prefWidth="194.0" text="nameLabel" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="usernameLabel" layoutX="622.0" layoutY="136.0" prefHeight="23.0" prefWidth="221.0" text="usernameLabel" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="roleLabel" layoutX="640.0" layoutY="178.0" prefHeight="23.0" prefWidth="110.0" text="roleLabel" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="idLabel" layoutX="650.0" layoutY="302.0" text="idLabel" textAlignment="CENTER">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="546.0" layoutY="94.0" text="ชื่อ:">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="505.0" layoutY="136.0" text="Username:">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="idLabel1" layoutX="546.0" layoutY="303.0" text="ID:">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="531.0" layoutY="177.0" text="Role:">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Pane layoutX="51.0" layoutY="39.0">
+                    <children>
+                        <ImageView fitHeight="36.0" fitWidth="35.0">
+                            <image>
+                                <Image url="@../../../../images/Leftarrow.png" />
+                            </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#onBackButton" opacity="0.0" prefHeight="41.0" prefWidth="47.0" text="Back">
+                            <font>
+                                <Font size="19.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+            <Button fx:id="onChangeProfileImageButtonClick" layoutX="240.0" layoutY="327.0" mnemonicParsing="false" onAction="#onChangeProfileImageButtonClick" prefHeight="42.0" prefWidth="174.0" styleClass="LoginButton" text="เปลี่ยนรูปโปรไฟล์">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="240.0" layoutY="409.0" mnemonicParsing="false" onAction="#onChangePasswordButtonClick" prefHeight="42.0" prefWidth="174.0" styleClass="LoginButton" text="เปลี่ยนรหัสผ่าน">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Pane fx:id="resetPasswordPane" layoutX="462.0" layoutY="394.0" prefHeight="297.0" prefWidth="346.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="75.0" text="New Password:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="147.0" text="Confirm Password:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="newPasswordTextfield" layoutX="24.0" layoutY="101.0" prefHeight="42.0" prefWidth="311.0" promptText="Enter New Password" />
+                  <PasswordField fx:id="confirmPasswordTextfield" layoutX="22.0" layoutY="175.0" prefHeight="42.0" prefWidth="311.0" promptText="Enter Confirm Password" />
+                  <Label layoutX="25.0" layoutY="6.0" text="Old Password:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="oldPasswordTextfield" layoutX="25.0" layoutY="31.0" prefHeight="42.0" prefWidth="311.0" promptText="Enter Old Password" />
+                  <Label fx:id="errorLabel" layoutX="25.0" layoutY="225.0" text="errorlabel" textFill="#ea0707">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="24.0" layoutY="253.0" mnemonicParsing="false" onAction="#onEnterButtonClick" styleClass="LoginButton" text="Enter">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Label fx:id="majorLabel" layoutX="639.0" layoutY="258.0" prefHeight="30.0" prefWidth="222.0" text="majorLabel" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="majorLabel1" layoutX="530.0" layoutY="259.0" text="ภาควิชา:">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="facultyLabel" layoutX="639.0" layoutY="218.0" prefHeight="30.0" prefWidth="242.0" text="facultyLabel" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="facultytextLabel" layoutX="530.0" layoutY="220.0" text="คณะ:">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            </children>
+         <stylesheets>
+            <URL value="@../../style/baseOnPageLightMode.css" />
+            <URL value="@../../style/noto.css" />
+         </stylesheets>
+        </AnchorPane>
+      <ImageView fitHeight="720.0" fitWidth="469.0" layoutX="842.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/login-register-icon.png" />
+         </image>
+      </ImageView>
+    </children>
+</Pane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="background" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.facultyStaff.EditApproveFacultyStaffController">
+    <children>
+        <TextField fx:id="nameId" layoutX="654.0" layoutY="238.0" prefHeight="47.0" prefWidth="396.0" promptText="Enter Name" styleClass="text-field" />
+        <Label layoutX="739.0" layoutY="125.0" text="แก้ไขข้อมูลเจ้าหน้าที่คณะ">
+            <font>
+                <Font name="AppleMyungjo Regular" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="654.0" layoutY="199.0" text="ชื่อ-นามสกุล">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="654.0" layoutY="330.0" text="ตำแหน่ง">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="confirmButton" layoutX="879.0" layoutY="477.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="112.0" styleClass="LoginButton" text="ยืนยัน">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="63.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../images/Leftarrow.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="39.0" layoutY="57.0" mnemonicParsing="false" onAction="#onBackButtonClick" opacity="0.0" prefHeight="47.0" prefWidth="86.0" text="Button" />
+        <Label fx:id="errorLabel1" layoutX="654.0" layoutY="292.0" text="errorLabel1" textFill="RED" />
+        <Label fx:id="errorLabel2" layoutX="654.0" layoutY="423.0" text="errorLabel2" textFill="RED" />
+        <Label fx:id="errorLabel3" layoutX="654.0" layoutY="539.0" text="errorLabel3" textFill="RED" />
+        <Button layoutX="1047.0" layoutY="61.0" mnemonicParsing="false" onAction="#onAddFacultyStaffButtonClick" styleClass="LoginButton" text="เพิ่มข้อมูลเจ้าหน้าที่คณะ" />
+      <Label fx:id="errorLabel4" layoutX="900.0" layoutY="540.0" text="errorLabel4" textFill="RED" />
+      <Label layoutX="654.0" layoutY="447.0" text="คณะ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="roleChoiceBox" layoutX="654.0" layoutY="376.0" prefWidth="150.0" />
+      <TextField fx:id="positionId" layoutX="817.0" layoutY="366.0" prefHeight="47.0" prefWidth="235.0" promptText="Enter Position" styleClass="text-field" />
+      <Label fx:id="position" layoutX="821.0" layoutY="330.0" text="ฝ่าย">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="facultyChoiceBox" layoutX="654.0" layoutY="483.0" prefWidth="150.0" />
+      <ImageView fitHeight="657.0" fitWidth="396.0" layoutX="161.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/login-register-icon.png" />
+         </image>
+      </ImageView>
+    </children>
+   <stylesheets>
+      <URL value="@../../style/noto.css" />
+      <URL value="@../../style/baseOnPageLightMode.css" />
+   </stylesheets>
+</AnchorPane>

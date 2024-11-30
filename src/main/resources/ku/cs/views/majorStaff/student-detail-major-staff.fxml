@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.majorStaff.StudentDetailController">
+    <children>
+        <Label fx:id="userTextLabel" layoutX="590.0" layoutY="123.0" text="ข้อมูลuser">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <Label fx:id="nameLabel" layoutX="577.0" layoutY="250.0" text="ข้อมูลuser">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <Label fx:id="idLabel" layoutX="575.0" layoutY="330.0" text="ข้อมูลuser">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <Label fx:id="emailLabel" layoutX="597.0" layoutY="408.0" text="ข้อมูลuser">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <Label fx:id="advisorIdLabel" layoutX="676.0" layoutY="554.0" text="ข้อมูลuser">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
+        <Pane layoutX="6.0" layoutY="-1.0" prefHeight="80.0" prefWidth="1275.0" style="-fx-background-color: EAF4FF;">
+            <children>
+                <Button fx:id="toggleSidebarButton" layoutX="-7.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="124.0" style="-fx-background-color: #2F80ED; -fx-background-radius: 0;" textFill="WHITE" />
+            <ImageView fitHeight="29.0" fitWidth="43.0" layoutX="40.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Hamburger.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="145.0" layoutY="20.0" mnemonicParsing="false" onAction="#homeButtonClick" styleClass="ButtonNavbar" text="HOME">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="534.0" layoutY="20.0" mnemonicParsing="false" onAction="#onAddEndorserButton" styleClass="ButtonNavbarNotMain" text="แก้ไขผู้อนุมัติคำร้อง">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="414.0" layoutY="20.0" mnemonicParsing="false" onAction="#onStudentListButton" styleClass="ButtonNavbarNotMain" text="รายชื่อนิสิต">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="244.0" layoutY="20.0" mnemonicParsing="false" onAction="#onApproveMajorButton" styleClass="ButtonNavbarNotMain" text="แสดงรายชื่อผู้อนุมัติ">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            </children>
+        </Pane>
+        <Circle fx:id="imagecircle" fill="DODGERBLUE" layoutX="262.0" layoutY="393.0" radius="155.0" stroke="BLACK" strokeType="INSIDE" />
+        <Button layoutX="1028.0" layoutY="130.0" mnemonicParsing="false" onAction="#editStudentButtonClick" text="แก้ไขข้อมูลนิสิต">
+            <graphic>
+                <ImageView fitHeight="31.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/editPicture.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+      <Label fx:id="advisorLabel" layoutX="678.0" layoutY="483.0" text="ข้อมูลuser">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel1" layoutX="493.0" layoutY="250.0" text="ชื่อ:">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel11" layoutX="493.0" layoutY="330.0" text="ID:">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel111" layoutX="493.0" layoutY="408.0" text="Email:">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel1111" layoutX="493.0" layoutY="483.0" text="อาจารย์ที่ปรึกษา:">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+        <Pane fx:id="editStaffPane" layoutX="440.0" layoutY="182.0" prefHeight="442.0" prefWidth="746.0" style="-fx-background-color: #FFFFFF;">
+            <children>
+                <Button layoutX="462.0" layoutY="354.0" mnemonicParsing="false" onAction="#enterEditButtonClick" text="ยืนยันการแก้ไข">
+                    <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../images/editPicture.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Label layoutX="36.0" layoutY="53.0" text="Name-Surname:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameTextField" layoutX="36.0" layoutY="81.0" prefHeight="38.0" prefWidth="396.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="36.0" layoutY="130.0" text="ID:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="idTextField" layoutX="36.0" layoutY="158.0" prefHeight="37.0" prefWidth="396.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="36.0" layoutY="202.0" text="Email:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="advisorIdTextfield" layoutX="36.0" layoutY="307.0" prefHeight="37.0" prefWidth="396.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <Label fx:id="advisorIdPaneLabel" layoutX="36.0" layoutY="279.0" text="AdvisorID:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            <Label fx:id="errorLabel" layoutX="130.0" layoutY="387.0" text="errorLabel" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailTextField" layoutX="36.0" layoutY="236.0" prefHeight="37.0" prefWidth="396.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            </children>
+        </Pane>
+    </children>
+   <stylesheets>
+      <URL value="@../../style/baseOnPageLightMode.css" />
+      <URL value="@../../style/noto.css" />
+   </stylesheets>
+</AnchorPane>

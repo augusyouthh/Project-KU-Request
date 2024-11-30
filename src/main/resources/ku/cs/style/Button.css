@@ -1,0 +1,53 @@
+@import "noto.css";
+.button{
+    -fx-background-radius: 25px;
+    -fx-padding: 10px 20px;
+    -fx-background-color: #EAF4FF;
+}
+.Button{
+    -fx-background-color: #FFFFFF;
+}
+.ButtonNavbar{
+    -fx-background-color:  #2F80ED;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.ButtonNavbarNotMain{
+    -fx-background-color: #EAF4FF;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.LoginButton{
+    -fx-background-color: #6EB1FF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.LoginButton:hover{
+    -fx-background-color: #0096DC;
+}
+.CancelButton{
+    -fx-background-color: #FF4D4D;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.AcceptButton{
+    -fx-background-color: #00C821;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.addButton{
+    -fx-background-color: #EAF4FF;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.backButton{
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #6EB1FF;
+    -fx-font-size: 14px;
+}

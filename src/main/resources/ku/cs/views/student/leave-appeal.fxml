@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #EDF5FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.student.LeaveAppealController">
+   <children>
+      <Pane layoutX="320.0" layoutY="14.0" prefHeight="693.0" prefWidth="640.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, gray, 20, 0.1, 0 ,0);">
+         <children>
+            <Label fx:id="ErrorLabel" layoutX="435.0" layoutY="580.0" prefHeight="17.0" prefWidth="176.0" text="Please fill out before submitting!" textFill="#f50000" visible="false">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="220.0" layoutY="22.0">
+               <children>
+                  <Label layoutX="-14.0" layoutY="4.0" prefHeight="27.0" prefWidth="220.0" text="ใบขอลาพักการศึกษา">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="212.0" layoutY="2.0">
+                     <image>
+                        <Image url="@../../../../images/absent.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="61.0" layoutY="70.0" prefHeight="20.0" prefWidth="98.0" text="สาเหตุที่ลา:">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="subjectTextField" layoutX="57.0" layoutY="96.0" prefHeight="65.0" prefWidth="546.0" style="-fx-background-radius: 10;" />
+            <Label layoutX="61.0" layoutY="443.0" text="วัน/เดือน/ปี:">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="511.0" text="ลงนามนิสิต/ผู้ดำเนินการแทน:">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Group layoutX="63.0" layoutY="469.0">
+               <children>
+                  <Spinner fx:id="daySpinner" prefHeight="35.0" prefWidth="75.0" />
+                  <Spinner fx:id="monthSpinner" layoutX="82.0" prefHeight="35.0" prefWidth="75.0" />
+                  <Spinner fx:id="yearSpinner" layoutX="163.0" prefHeight="35.0" prefWidth="89.0" />
+               </children>
+            </Group>
+            <TextField fx:id="signatureTextField" layoutX="57.0" layoutY="537.0" prefHeight="42.0" prefWidth="285.0" style="-fx-background-radius: 10;" />
+            <Button layoutX="265.0" layoutY="600.0" minHeight="40.0" minWidth="170.0" mnemonicParsing="false" onAction="#onResetAppealClick" styleClass="resetButton" text="Reset">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="438.0" layoutY="600.0" minHeight="40.0" minWidth="170.0" mnemonicParsing="false" onAction="#onApplyAppealClick" styleClass="LoginButton" text="Apply" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="61.0" layoutY="173.0" prefHeight="20.0" prefWidth="411.0" text="มีความประสงค์ขอลงพักการศึกษาเป็นจำนวน">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nyearsTextField" layoutX="376.0" layoutY="169.0" prefHeight="34.0" prefWidth="79.0" />
+            <Label layoutX="61.0" layoutY="218.0" prefHeight="20.0" prefWidth="89.0" text="ตั้งเเต่ภาค   ">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="startyearSpinner" layoutX="260.0" layoutY="211.0" prefHeight="34.0" prefWidth="79.0" />
+            <Label layoutX="465.0" layoutY="173.0" prefHeight="20.0" prefWidth="98.0" text="ภาคการศึกษา">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="349.0" layoutY="218.0" prefHeight="20.0" prefWidth="49.0" text="ถึงภาค">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="endyearSpinner" layoutX="523.0" layoutY="211.0" prefHeight="34.0" prefWidth="79.0" />
+            <TextField fx:id="startSemesterfield" layoutX="133.0" layoutY="211.0" prefHeight="34.0" prefWidth="42.0" />
+            <Label layoutX="181.0" layoutY="218.0" prefHeight="20.0" prefWidth="79.0" text="ปีการศึกษา">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="endSemesterfield" layoutX="398.0" layoutY="211.0" prefHeight="34.0" prefWidth="42.0" />
+            <Label layoutX="444.0" layoutY="218.0" prefHeight="20.0" prefWidth="79.0" text="ปีการศึกษา">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="258.0" prefHeight="20.0" prefWidth="377.0" text="วิชาที่ลงทะเบียนไว้ดังนี้ (กรอกรหัสวิชาตามด้วยชื่อวิชา)">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="courseTextfield" alignment="TOP_LEFT" layoutX="57.0" layoutY="290.0" prefHeight="149.0" prefWidth="546.0" style="-fx-background-radius: 10;" />
+         </children>
+      </Pane>
+      <Pane layoutX="53.0" layoutY="38.0" prefHeight="34.0" prefWidth="35.0">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="36.0">
+               <image>
+                  <Image url="@../../../../images/Leftarrow.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="backbutton" layoutX="-4.0" layoutY="-5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBackButtonClick" opacity="0.0" prefHeight="40.0" prefWidth="43.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../style/baseOnPageLightMode.css" />
+      <URL value="@../../style/noto.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,100 @@
+/* ปรับแต่ง TableView ให้มีเงา */
+.table-view {
+    -fx-border-color: transparent; /* ลบขอบของตาราง */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.2, 2, 2); /* เพิ่มเงา */
+    -fx-padding: 10px; /* ระยะห่างภายใน */
+    -fx-background-radius: 25px;
+}
+/* ปรับแต่ง TableView Header ให้เป็นสีขาว */
+.table-view .column-header-background {
+    -fx-background-color: #ffffff; /* ตั้งค่าสีพื้นหลังของหัวคอลัมน์เป็นสีขาว */
+    -fx-border-color: transparent; /* ลบขอบของหัวคอลัมน์ */
+    -fx-border-width: 0; /* กำหนดขนาดของขอบเป็น 0 */
+    -fx-padding: 8px; /* ระยะห่างภายในหัวคอลัมน์ */
+}
+
+/* ปรับแต่งข้อความใน Header */
+.table-view .column-header-background .label {
+    -fx-text-fill: #333333; /* สีของข้อความ */
+    -fx-font-weight: bold; /* ทำให้ตัวอักษรหนา */
+    -fx-font-size: 14px; /* ขนาดของตัวอักษร */
+}
+
+/* เพิ่มเอฟเฟกต์เมื่อชี้ไปที่ Header */
+.table-view .column-header-background:hover {
+    -fx-background-color: #f0f0f0; /* เปลี่ยนสีเมื่อชี้ */
+}
+
+/* ปรับแต่ง TableCell */
+.table-view .table-cell {
+    -fx-alignment: CENTER_LEFT; /* จัดตำแหน่งข้อความให้อยู่ซ้ายกลาง */
+    -fx-padding: 5px; /* ระยะห่างภายในเซลล์ */
+}
+
+/* ปรับแต่ง Row Hover */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #e6f7ff; /* สีพื้นหลังเมื่อมีการชี้ */
+}
+
+/* ปรับแต่ง Selected Row */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #cceeff; /* สีพื้นหลังเมื่อมีการเลือก */
+    -fx-text-fill: #333333; /* สีของข้อความเมื่อมีการเลือก */
+}
+
+/* ตัวอย่างการตกแต่ง TextField */
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #8A8A8A;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 10px;
+}
+
+/* ตัวอย่างการตกแต่งปุ่ม */
+.button {
+    -fx-background-color: #4CAF50; /* สีเขียว */
+    -fx-text-fill: white; /* สีของข้อความเป็นสีขาว */
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 25px;
+}
+
+.button:hover {
+    -fx-background-color: #45A049; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* ตัวอย่างการตกแต่งข้อความ Alert */
+.alert {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* ตัวอย่างการตกแต่ง Layout */
+.root {
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+}
+.label{
+    -fx-font-family: Sana;
+}
+.choice-box{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 25px;
+    -fx-border-color: #000000;
+    -fx-border-radius: 25px;
+}
+
+#Button{
+    -fx-background-color:  #6EB1FF;
+    -fx-text-fill: white; /* สีของข้อความเป็นสีขาว */
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 25px;
+}
+#Button:hover{
+    -fx-background-color: #5DADE2;
+}

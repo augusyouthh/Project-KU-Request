@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="background" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.RegisterController">
+   <children>
+      <ImageView fitHeight="68.0" fitWidth="349.0" layoutX="709.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/MYMEE.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="806.0" layoutY="117.0" text="Please Fill out form to Register!">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="670.0" layoutY="152.0" text="Name-Surname:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTextField" layoutX="670.0" layoutY="179.0" prefHeight="38.0" prefWidth="396.0" promptText="Enter Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="670.0" layoutY="226.0" text="Username:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTextField" layoutX="670.0" layoutY="248.0" prefHeight="37.0" prefWidth="396.0" promptText="Enter Username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="672.0" layoutY="362.0" text="Email:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailTextField" layoutX="672.0" layoutY="389.0" prefHeight="37.0" prefWidth="396.0" promptText="Enter Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="672.0" layoutY="433.0" text="Password:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="671.0" layoutY="506.0" text="Confirm Password:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="LoginButton" layoutX="673.0" layoutY="601.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="51.0" prefWidth="396.0" styleClass="LoginButton" text="Register">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="849.0" layoutY="656.0" mnemonicParsing="false" onAction="#onLoginButtonClick" style="-fx-background-color: #FFFFFF;" styleClass="backButton" text="Login" textFill="#6eb1ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="674.0" layoutY="664.0" prefHeight="26.0" prefWidth="178.0" styleClass="smallLabel" text="already have an account?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="709.0" layoutY="117.0" text="*for student" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="724.0" fitWidth="449.0" layoutX="15.0">
+         <image>
+            <Image url="@../../../../images/login-register-icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="669.0" layoutY="295.0" prefHeight="20.0" prefWidth="74.0" text="Student ID:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTextField" layoutX="671.0" layoutY="320.0" prefHeight="37.0" prefWidth="396.0" promptText="Enter Student Id">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+
+      <Label fx:id="errorLabel" layoutX="669.0" layoutY="571.0" stylesheets="@../../style/errorLabel.css" text="errorLabel" textFill="RED" />
+      <PasswordField fx:id="passwordTextField" layoutX="671.0" layoutY="453.0" prefHeight="37.0" prefWidth="396.0" promptText="Enter Password" />
+      <PasswordField fx:id="confirmPasswordTextField" layoutX="670.0" layoutY="533.0" prefHeight="37.0" prefWidth="396.0" promptText="Enter Confirm" />
+   </children>
+   <stylesheets>
+      <URL value="@../../style/noto.css" />
+      <URL value="@../../style/lightmode.css" />
+   </stylesheets>
+</AnchorPane>

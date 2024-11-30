@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #EDF5FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.student.EnrollAppealController">
+   <children>
+      <Pane layoutX="320.0" layoutY="14.0" prefHeight="693.0" prefWidth="640.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, gray, 20, 0.1, 0 ,0);">
+         <children>
+            <Label fx:id="ErrorLabel" layoutX="435.0" layoutY="580.0" prefHeight="17.0" prefWidth="176.0" text="Please fill out before submitting!" textFill="#f50000" visible="false">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="186.0" layoutY="22.0">
+               <children>
+                  <Label layoutY="3.0" text="คำร้องขอลงทะเบียนเรียน">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="264.0">
+                     <image>
+                        <Image url="@../../../../images/book.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="63.0" layoutY="75.0" prefHeight="20.0" prefWidth="131.0" text="มีความประสงค์:">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="63.0" layoutY="443.0" text="วัน/เดือน/ปี:">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="511.0" text="ลงนามนิสิต/ผู้ดำเนินการแทน:">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <Group layoutX="63.0" layoutY="469.0">
+               <children>
+                  <Spinner fx:id="daySpinner" prefHeight="35.0" prefWidth="75.0" />
+                  <Spinner fx:id="monthSpinner" layoutX="83.0" prefHeight="35.0" prefWidth="75.0" />
+                  <Spinner fx:id="yearSpinner" layoutX="164.0" prefHeight="35.0" prefWidth="89.0" />
+               </children>
+            </Group>
+            <TextField fx:id="signatureTextField" layoutX="57.0" layoutY="537.0" prefHeight="42.0" prefWidth="285.0" />
+            <Button layoutX="265.0" layoutY="600.0" minHeight="40.0" minWidth="170.0" mnemonicParsing="false" onAction="#onResetAppealClick" styleClass="resetButton" text="Reset">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="applyAppeal" layoutX="438.0" layoutY="600.0" minHeight="40.0" minWidth="170.0" mnemonicParsing="false" onAction="#onApplyAppealClick" styleClass="LoginButton" text="Apply" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="lateRegisCheck" layoutX="63.0" layoutY="110.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="431.0" text="ลงทะเบียนเรียนล่าช้าหรือรักษาสถานภาพนิสิตล่าช้า (แนบ KU 1)">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="lateAddDropCheck" layoutX="63.0" layoutY="147.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="285.0" text="เพิ่มหรือถอนรายวิชาล่าช้า (แนบ KU 3) ">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="OverRegisCheck" layoutX="63.0" layoutY="184.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="530.0" text="ลงทะเบียนเกิน 22 หน่วยกิตหรือเกิน 7 หน่วยกิตสำหรับภาคฤดูร้อน (แนบ KU 3)">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="LessRegisCheck" layoutX="63.0" layoutY="221.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="225.0" text="ลงทะเบียนต่ากว่า 9 หน่วยกิต">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="PostPayCheck" layoutX="63.0" layoutY="258.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="225.0" text="ผ่อนผันค่าธรรมเนียมการศึกษา">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="TransferMajorCheck" layoutX="300.0" layoutY="258.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="236.0" text="ย้ายคณะ หรือเปลี่ยนสาขาวิชาเอก">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </CheckBox>
+            <Label layoutX="63.0" layoutY="295.0" prefHeight="20.0" prefWidth="530.0" text="เนื่องจาก เเละ รายละเอียดเพิ่มเติม (ภาคเเละปีการเรียน หรือ จำนวนหน่วยกิต)">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="requestTextField" alignment="TOP_LEFT" layoutX="57.0" layoutY="318.0" prefHeight="122.0" prefWidth="544.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="53.0" layoutY="38.0" prefHeight="34.0" prefWidth="35.0">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="36.0">
+               <image>
+                  <Image url="@../../../../images/Leftarrow.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="backbutton" layoutX="-4.0" layoutY="-5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBackButtonClick" opacity="0.0" prefHeight="40.0" prefWidth="43.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../style/baseOnPageLightMode.css" />
+      <URL value="@../../style/noto.css" />
+   </stylesheets>
+</AnchorPane>

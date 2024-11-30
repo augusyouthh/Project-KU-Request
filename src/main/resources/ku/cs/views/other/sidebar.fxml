@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" prefHeight="720.0" prefWidth="300.0" styleClass="component-sidebar" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.components.SidebarController">
+   <children>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/Leftarrow.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="backButton" layoutX="12.0" layoutY="26.0" mnemonicParsing="false" opacity="0.0" prefHeight="43.0" prefWidth="61.0" />
+      <ImageView fitHeight="243.0" fitWidth="186.0" layoutX="61.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/kulogo.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="62.0" layoutY="595.0" mnemonicParsing="false" onAction="#onLogoutButtonClick" prefHeight="49.0" prefWidth="208.0" styleClass="logout-button" text="ออกจากระบบ" />
+      <ImageView fitHeight="30.0" fitWidth="23.0" layoutX="70.0" layoutY="608.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/Exit.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="myTeamButton" layoutX="50.0" layoutY="536.0" mnemonicParsing="false" onAction="#onMyTeamButtonClick" prefHeight="43.0" prefWidth="208.0" styleClass="setting-button" text="Developer" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="67.0" layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/Web%20development.png" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@../../style/noto.css" />
+      <URL value="@../../style/baseOnPageLightMode.css" />
+   </stylesheets>
+</AnchorPane>

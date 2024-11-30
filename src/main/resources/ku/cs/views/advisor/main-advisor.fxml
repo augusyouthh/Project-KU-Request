@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.advisor.MainAdvisorController">
+    <children>
+        <Pane prefHeight="80.0" prefWidth="1280.0" style="-fx-background-color: EAF4FF;">
+            <children>
+                <Button fx:id="toggleSidebarButton" layoutX="-7.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="135.0" style="-fx-background-color: #2F80ED; -fx-background-radius: 0;" textFill="WHITE" />
+                <Label fx:id="usernameLabel" alignment="CENTER" layoutX="900.0" layoutY="13.0" prefHeight="58.0" prefWidth="247.0" text="Advisor">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="1186.0" layoutY="5.0" onMouseClicked="#onPictureClick" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../images/teacher.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="165.0" layoutY="20.0" mnemonicParsing="false" styleClass="ButtonNavbar" text="HOME" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+            <ImageView fitHeight="29.0" fitWidth="43.0" layoutX="45.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Hamburger.png" />
+               </image>
+            </ImageView>
+            </children>
+        </Pane>
+        <TextField fx:id="searchTextField" layoutX="403.0" layoutY="176.0" prefHeight="48.0" prefWidth="431.0" promptText="Search" style="-fx-background-radius: 20; -fx-border-radius: 20;" styleClass="textfile-container" stylesheets="@../../style/Style.css">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <Label alignment="CENTER" layoutX="502.0" layoutY="127.0" text="รายชื่อในอาจารย์ที่ปรึกษา">
+            <font>
+                <Font name="Arial Bold" size="25.0" />
+            </font>
+        </Label>
+        <TableView fx:id="studentAdvisorTableView" layoutX="193.0" layoutY="232.0" prefHeight="440.0" prefWidth="895.0" style="-fx-background-radius: 10;" styleClass="tableview" stylesheets="@../../style/Style.css">
+            <columns>
+                <TableColumn prefWidth="75.0" styleClass="table-row-cell" text="Student ID" />
+                <TableColumn prefWidth="75.0" styleClass="table-row-cell" text="Student Name" />
+                <TableColumn prefWidth="75.0" styleClass="table-row-cell" text="Faculty" />
+                <TableColumn prefWidth="75.0" styleClass="table-row-cell" text="Major" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Label fx:id="errorLabel" layoutX="956.0" layoutY="195.0" text="errorLabel" textFill="RED">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font></Label>
+        <Button fx:id="searchButtonClick" layoutX="840.0" layoutY="177.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="100.0" styleClass="LoginButton" text="Search" />
+    </children>
+   <stylesheets>
+      <URL value="@../../style/baseOnPageLightMode.css" />
+      <URL value="@../../style/noto.css" />
+   </stylesheets>
+</AnchorPane>

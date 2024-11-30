@@ -1,0 +1,105 @@
+.background{
+    -fx-background-color: #FFFFFF;
+}
+.button{
+    -fx-background-radius: 25px;
+    -fx-padding: 10px 20px;
+    -fx-background-color: #EAF4FF;
+}
+.Button{
+    -fx-background-color: #FFFFFF;
+}
+.ButtonNavbar{
+    -fx-background-color:  #2F80ED;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.ButtonNavbarNotMain{
+    -fx-background-color: #EAF4FF;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.LoginButton{
+    -fx-background-color: #6EB1FF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.LoginButton:hover{
+    -fx-background-color: #0096DC;
+}
+.CancelButton{
+    -fx-background-color: #FF4D4D;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.AcceptButton{
+    -fx-background-color: #00C821;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.addButton{
+    -fx-background-color: #EAF4FF;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+}
+.backButton{
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #6EB1FF;
+    -fx-font-size: 14px;
+}
+.choice-box{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: black;
+    -fx-border-radius: 15px;
+}
+.text-field{
+    background-color: #fff;
+    border-bottom-color: #333333;
+}
+.text-field{
+    -fx-background-color: #FFFFFF;
+    -fx-border-radius: 10px;
+    -fx-border-color: #BFC9CA;
+}
+.boldText{
+    font-weight: bold;
+    -fx-font-size: 20px;
+}
+.roleLabel{
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+.normalLabel{
+    -fx-font-size: 16px;
+}
+.smallLabel{
+    -fx-font-size: 14px;
+}
+.table-view .column-header-background .label {
+    -fx-background-color: #2F80ED;
+    -fx-text-fill: white;
+}
+
+
+.table-view {
+    -fx-background-color: -fx-control-inner-background;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-background-color: transparent;
+}
+.table-view .table-row-cell:focused .table-cell,
+.table-view .table-row-cell:selected .table-cell {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: black;
+}

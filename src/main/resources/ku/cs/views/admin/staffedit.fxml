@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mainPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.admin.StaffEditController">
+   <children>
+      <Label fx:id="userTextLabel" layoutX="590.0" layoutY="123.0" text="ข้อมูลuser">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel" layoutX="498.0" layoutY="250.0" text="ข้อมูลuser">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="499.0" layoutY="330.0" text="ข้อมูลuser">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="facultyLabel" layoutX="498.0" layoutY="410.0" text="ข้อมูลuser">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="IdorDepartmentLabel" layoutX="501.0" layoutY="490.0" text="ข้อมูลuser">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Pane layoutX="6.0" layoutY="-1.0" prefHeight="80.0" prefWidth="1275.0" style="-fx-background-color: EAF4FF;">
+         <children>
+            <Button fx:id="toggleSidebarButton" layoutX="-7.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="124.0" style="-fx-background-color: #2F80ED; -fx-background-radius: 0;" textFill="WHITE" />
+            <Label layoutX="1065.0" layoutY="22.0" text="Admin">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <Button layoutX="135.0" layoutY="22.0" mnemonicParsing="false" onAction="#homeButtonClick" styleClass="ButtonNavbar" text="HOME">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+
+            <Button layoutX="233.0" layoutY="22.0" mnemonicParsing="false" onAction="#onManageFacultyButtonClick" styleClass="ButtonNavbarNotMain" text="จัดการข้อมูลคณะและภาควิชา">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="464.0" layoutY="22.0" mnemonicParsing="false" onAction="#manageStaffdataButtonClick" styleClass="ButtonNavbarNotMain" text="จัดการข้อมูลเจ้าหน้าที่และอาจารย์">
+
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+
+            <Button layoutX="472.0" layoutY="22.0" mnemonicParsing="false" onAction="#manageStaffdataButtonClick" styleClass="ButtonNavbarNotMain" text="จัดการข้อมูลเจ้าหน้าที่และอาจารย์">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="722.0" layoutY="22.0" mnemonicParsing="false" onAction="#dashboardButtonClick" styleClass="ButtonNavbarNotMain" text="Dashboard">
+
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="29.0" fitWidth="43.0" layoutX="40.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Hamburger.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Circle fx:id="imagecircle" fill="DODGERBLUE" layoutX="262.0" layoutY="393.0" radius="155.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="1018.0" layoutY="130.0" mnemonicParsing="false" onAction="#editStaffButtonClick" text="แก้ไขข้อมูลเจ้าหน้าที่">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/editPicture.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Pane fx:id="editStaffPane" layoutX="440.0" layoutY="182.0" prefHeight="461.0" prefWidth="746.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Button layoutX="473.0" layoutY="350.0" mnemonicParsing="false" onAction="#enterEditButtonClick" text="ยืนยันการแก้ไข">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/editPicture.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ChoiceBox fx:id="majorChoiceBox" layoutX="257.0" layoutY="296.0" prefHeight="38.0" prefWidth="191.0" />
+            <Label layoutX="36.0" layoutY="53.0" text="Name-Surname:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameTextField" layoutX="36.0" layoutY="81.0" prefHeight="38.0" prefWidth="396.0" style="-fx-background-radius: 10;" stylesheets="@../../style/field.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="36.0" layoutY="130.0" text="Username:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTextField" layoutX="36.0" layoutY="158.0" prefHeight="37.0" prefWidth="396.0" style="-fx-background-radius: 10;" stylesheets="@../../style/field.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="36.0" layoutY="202.0" text="Password:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordTextField" layoutX="36.0" layoutY="230.0" prefHeight="37.0" prefWidth="396.0" style="-fx-background-radius: 10;" stylesheets="@../../style/field.css" />
+            <TextField fx:id="advisorIdTextfield" layoutX="40.0" layoutY="367.0" prefHeight="37.0" prefWidth="396.0" style="-fx-background-radius: 10;" stylesheets="@../../style/field.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <ChoiceBox fx:id="facultyChoiceBox" layoutX="36.0" layoutY="296.0" prefHeight="38.0" prefWidth="191.0" />
+            <Label fx:id="advisorIdLabel" layoutX="41.0" layoutY="338.0" text="AdvisorID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="272.0" text="Faculty:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="majorChoiceBoxLabel" layoutX="260.0" layoutY="272.0" text="Major:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" layoutX="37.0" layoutY="412.0" text="errorLabel" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Circle fx:id="imagecircleuser" fill="DODGERBLUE" layoutX="1228.0" layoutY="41.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="1201.0" layoutY="16.0" mnemonicParsing="false" onAction="#onUserProfileButton" opacity="0.0" prefHeight="51.0" prefWidth="52.0" text="Button" />
+   </children>
+   <stylesheets>
+      <URL value="@../../style/noto.css" />
+      <URL value="@../../style/baseOnPageLightMode.css" />
+   </stylesheets>
+</AnchorPane>

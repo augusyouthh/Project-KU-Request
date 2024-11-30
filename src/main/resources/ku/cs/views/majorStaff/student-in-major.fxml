@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPage" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.majorStaff.StudentInMajorController">
+   <children>
+      <Pane layoutX="-3.0" layoutY="-3.0" prefHeight="80.0" prefWidth="1275.0" style="-fx-background-color: EAF4FF;">
+         <children>
+            <Button fx:id="toggleSidebarButton" layoutX="-7.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="124.0" style="-fx-background-color: #2F80ED; -fx-background-radius: 0;" textFill="WHITE" />
+            <Label layoutX="1024.0" layoutY="24.0" text="Major-Staff">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Circle fx:id="imagecircle" fill="DODGERBLUE" layoutX="1235.0" layoutY="44.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+            <Button layoutX="1209.0" layoutY="18.0" mnemonicParsing="false" onAction="#onUserProfileButton" opacity="0.0" prefHeight="52.0" prefWidth="52.0" text="Button" />
+            <ImageView fitHeight="29.0" fitWidth="43.0" layoutX="40.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Hamburger.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="579.0" layoutY="118.0" text="รายชื่อนิสิตในภาควิชา">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="studentTableView" layoutX="292.0" layoutY="217.0" prefHeight="461.0" prefWidth="783.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button layoutX="1025.0" layoutY="118.0" mnemonicParsing="false" onAction="#addStudentButtonClick" text="เพิ่มข้อมูลนิสิต">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/editPicture.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchUserTextfield" layoutX="559.0" layoutY="169.0" prefWidth="250.0" promptText="Search">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button layoutX="128.0" layoutY="20.0" mnemonicParsing="false" onAction="#onHomeButton" styleClass="ButtonNavbarNotMain" text="HOME">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="217.0" layoutY="20.0" mnemonicParsing="false" onAction="#onApproveMajorButton" styleClass="ButtonNavbarNotMain" text="รายชื่อผู้อนุมัติคำร้อง" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="398.0" layoutY="20.0" mnemonicParsing="false" onAction="#onStudentListButton" styleClass="ButtonNavbar" text="รายชื่อนิสิต">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="512.0" layoutY="20.0" mnemonicParsing="false" onAction="#onAddEndorserButton" styleClass="ButtonNavbarNotMain" text="แก้ไขผู้อนุมัติคำร้อง">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@../../style/baseOnPageLightMode.css" />
+      <URL value="@../../style/noto.css" />
+   </stylesheets>
+</AnchorPane>

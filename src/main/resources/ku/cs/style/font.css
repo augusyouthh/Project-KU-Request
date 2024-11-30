@@ -1,0 +1,18 @@
+@import "noto.css";
+.label{
+    -fx-font-size: 18px;
+}
+.boldText{
+    font-weight: bold;
+    -fx-font-size: 20px;
+}
+.roleLabel{
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+.normalLabel{
+    -fx-font-size: 16px;
+}
+.smallLabel{
+    -fx-font-size: 14px;
+}

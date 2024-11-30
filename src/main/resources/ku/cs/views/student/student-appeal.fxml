@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #EDF5FF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.student.StudentAppealController">
+    <children>
+        <Label layoutX="546.0" layoutY="144.0" text="เลือกประเภทคำร้อง">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Label>
+        <Pane layoutX="22.0" layoutY="28.0" />
+        <Pane layoutX="365.0" layoutY="254.0">
+            <children>
+                <Button minHeight="65.0" minWidth="552.0" mnemonicParsing="false" onAction="#onNormalAppealClick" styleClass="appealButton" text="คำร้องทั่วไป">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="429.0" layoutY="20.0">
+                    <image>
+                        <Image url="@../../../../images/treaty.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="365.0" layoutY="330.0">
+            <children>
+                <Button minHeight="65.0" minWidth="552.0" mnemonicParsing="false" onAction="#onLeaveAppealClick" styleClass="appealButton" text="ใบลาพักการศึกษา">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="429.0" layoutY="20.0">
+                    <image>
+                        <Image url="@../../../../images/absent.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="367.0" layoutY="406.0">
+            <children>
+                <Button minHeight="65.0" minWidth="552.0" mnemonicParsing="false" onAction="#onEnrollAppealClick" styleClass="appealButton" text="คำร้องขอลงทะเบียน">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="429.0" layoutY="20.0">
+                    <image>
+                        <Image url="@../../../../images/book.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="53.0" layoutY="38.0" prefHeight="34.0" prefWidth="35.0">
+            <children>
+                <ImageView fitHeight="34.0" fitWidth="36.0">
+                    <image>
+                        <Image url="@../../../../images/Leftarrow.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="backbutton" layoutX="-4.0" layoutY="-5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onBackButtonClick" opacity="0.0" prefHeight="40.0" prefWidth="43.0" style="-fx-background-color: #FFFFFF;">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+    </children>
+   <stylesheets>
+      <URL value="@../../style/baseOnPageLightMode.css" />
+      <URL value="@../../style/noto.css" />
+   </stylesheets>
+</AnchorPane>

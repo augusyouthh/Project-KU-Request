@@ -1,0 +1,7 @@
+*
+!images/
+!data/
+!*.jar
+!*.pdf
+!.gitignore
+!*.png

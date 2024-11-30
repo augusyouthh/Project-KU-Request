@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.admin.addNewMajorDataController">
+    <children>
+        <TextField fx:id="facultyId" layoutX="227.0" layoutY="237.0" prefHeight="47.0" prefWidth="396.0" promptText="Enter Faculty ID" styleClass="text-field" />
+        <TextField fx:id="majorName" layoutX="227.0" layoutY="456.0" prefHeight="47.0" prefWidth="396.0" promptText="Enter Major Name" />
+        <TextField fx:id="majorId" layoutX="227.0" layoutY="348.0" prefHeight="47.0" prefWidth="396.0" promptText="Enter  Major Id" />
+        <Label fx:id="errorLabel1" layoutX="228.0" layoutY="293.0" text="errorLabel1" textFill="RED" />
+        <Label fx:id="errorLabel2" layoutX="228.0" layoutY="401.0" text="errorLabel2" textFill="RED" />
+        <Label fx:id="errorLabel3" layoutX="228.0" layoutY="510.0" text="errorLabel3" textFill="RED" />
+        <Button fx:id="okButton" layoutX="384.0" layoutY="546.0" mnemonicParsing="false" styleClass="LoginButton" text="OK" />
+        <Label fx:id="errorLabel4" layoutX="338.0" layoutY="609.0" text="errorLabel3" textFill="RED" />
+      <Label layoutX="338.0" layoutY="151.0" text="Add new major">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="227.0" layoutY="211.0" text="Faculty ID" />
+      <Label layoutX="227.0" layoutY="324.0" text="Major ID" />
+      <Label layoutX="231.0" layoutY="432.0" text="Major Name" />
+      <ImageView fitHeight="40.0" fitWidth="86.0" layoutX="63.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/Leftarrow.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="41.0" layoutY="81.0" mnemonicParsing="false" onAction="#backButtonClicked" opacity="0.0" text="Button" />
+      <Pane layoutX="810.0" prefHeight="722.0" prefWidth="472.0" styleClass="background-pane1">
+         <children>
+            <ImageView fitHeight="424.0" fitWidth="172.0" layoutX="213.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/cactus.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="556.0" fitWidth="604.0" layoutX="569.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/Character-working-laptop-sitting-chair.png" />
+         </image>
+      </ImageView>
+    </children>
+   <stylesheets>
+      <URL value="@../../style/noto.css" />
+      <URL value="@../../style/baseOnPageLightMode.css" />
+   </stylesheets>
+</AnchorPane>
